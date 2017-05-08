@@ -1231,7 +1231,7 @@
     <ClInclude Include="common\edriver\olediic.hpp">
       <Filter>Header files\common\edriver</Filter>
     </ClInclude>
-    <ClInclude Include="common\edriver\ultrasonic_wave_uart.hpp">
+    <ClInclude Include="common\edriver\ultrasonic_wave_uart.h">
       <Filter>Header files\common\edriver</Filter>
     </ClInclude>
   </ItemGroup>

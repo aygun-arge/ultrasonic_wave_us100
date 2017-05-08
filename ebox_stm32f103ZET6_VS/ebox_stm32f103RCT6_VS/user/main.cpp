@@ -2,8 +2,7 @@
 //uart2:PA3  PA2
 //oled:PA8 PA11
 #include "ebox.h"
-#include "olediic.hpp"
-#include "ultrasonic_wave_uart.hpp"
+#include "ultrasonic_wave_uart.h"
 #include "led.h"
 Led led1(&PA2,1);
 UltrasonicWaveUart wave(&uart2);
@@ -19,11 +18,12 @@ void main()
 	setup(); 
 	while(1)
 	{
-		uart2.printf("ok");
 		wave.trig();
 		uart1.printf("uart is ok!\n");
 		delay_ms(500);
-		uart1.printf("%d\n",wave.getDistance());
+		uart1.printf("%d\n",wave.read());
+
 		led1.toggle();
+		delay_ms(500);
 	}
 }
